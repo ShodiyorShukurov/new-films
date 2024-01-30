@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52-dars(Amaliyot)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="bg-black">
+
+    <section class="movies">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <form class="js-search-form d-flex" action="https://echo.htmlacademy.ru/courses" method="GET"
+                        autocomplete="off">
+                        <input class="js-search-input form-control me-2" type="search" name="search"
+                            aria-label="Search your movie" placeholder="Search">
+
+                        <select class="js-search-select form-select me-2" name="genres_select">
+                            <option value="all">All</option>
+                        </select>
+                        <input class="js-form-year form-control me-2" type="number" name="movies_year"
+                            placeholder="Form year...">
+                        <input class="js-to-year form-control me-2" type="number" name="movies_year"
+                            placeholder="To year...">
+                        <select class="form-select-sort form-select me-2" name="sorted" >
+                            <option selected disabled hidden >Movies sorted</option>
+                            <option value="all">All</option>
+                            <option value="a-z">A-Z</option>
+                            <option value="z-a">Z-A</option>
+                            <option value="oldest-latest">Oldest-Latest</option>
+                            <option value="latest-oldest">Latest-Oldest</option>
+                            <option value="low-rated">Low rated</option>
+                            <option value="high-rated">High rated</option>
+                            <option value="short-time">Short time</option>
+                            <option value="long-time">Long time</option>
+                        </select>
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="js-movies-list movies-list row mt-5">
+                <div class="loader-container">
+                    <img class="loader" src="./images/loader.svg" alt="Loader">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="js-movies-list movie-list mt-5 row">
+            <!-- <div class="container-loader">
+                 <img class="loading-svg" src="./images/loading.svg" alt="loading ">
+            </div> -->
+        </div>
+    </div>
+
+
+
+    <!-- MODAL START -->
+
+    <div class="modal js-modal" id="modal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body  row">
+                    <div class="col-5">
+                        <h2 class="js-modal-title">
+
+                        </h2>
+                        <iframe class="js-modal-iframe" width="450" height="300" src=" " title="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+                    <div class="col-7">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="js-modal-rating icon-rating">5</span>
+                                    <span class="js-modal-year icon-year">2023</span>
+                                    <span class="js-modal-time icon-time">1 hrs 6 min</span>
+                                </div>
+                                <div class="js-modal-categories mb-3">
+                                    dshjxcbkxjzm,
+                                </div>
+                                <p class="js-modal-summary mb-3">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi inventore saepe
+                                    officiis,
+                                    ab
+                                    debitis officia corrupti sapiente ut pariatur, consectetur tenetur repellendus iure
+                                    sunt
+                                    incidunt amet harum nulla similique optio quam, soluta quae facere mollitia? Autem
+                                    cumque a
+                                    unde iusto!
+                                </p>
+                            </div>
+                            <a class="js-modal-link" href="" target="blank">
+                                Show on IMDb
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL END -->
+
+    <!--TEMPLETE -->
+    <template class="js-movies-template">
+        <div class="js-movies-item mb-3 col-3 b-3">
+            <div class="movie-box text-bg-secondary p-4 h-100 d-flex flex-column justify-content-between ">
+                <img class="js-movies-img img-fluid" src="https://placeholder.com/150" alt="">
+                <h3 class="js-movies-title text-white mb-3">jsdckxz</h3>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="js-movies-rating icon-rating">6</span>
+                    <span class="js-movies-year icon-year">2021</span>
+                    <span class="js-movies-time icon-time">1hrs 30 min</span>
+                </div>
+                <div class="js-movies-categories text-white mb-3">
+                    jhscjkcshnx
+                </div>
+                <div class="d-grid">
+                    <button class="js-movies-btn btn btn-primary" type="button" data-bs-target="#modal"
+                        data-bs-toggle="modal">More info</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!--TEMPLETE -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/movies.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</body>
+
+</html>
