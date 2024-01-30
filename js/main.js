@@ -155,4 +155,4 @@ elSearchForm.addEventListener("submit", function (evt) {
 });
 
 // CALL RENDER MOVIES FUNCTION
-renderMovies(normalizeMovies.slice(0, 10));
+renderMovies(normalizeMovies.slice(0, 100));
